@@ -1,0 +1,10 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>Hi {{ .FirstName }},</p>
+        <p>You are now registered on xyz.com. To verify email please click on the following link.</p>
+        <p><a href="http://link.com?action=verify_email&{{ .link }}">http://link.com/{{ .link }}</a></p>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+[app]
+  # app name
+  name = 'a'
+  # app url
+  url = "http://localhost"
+  # app docs address
+  doc = "./apidoc"
+  addr = ":8080"
+  # Unit test debugging information
+  debug = true
+
+  # [app.logger]
+  #   level = "ERROR"
+  #   name = "application"
+
+
+#Database driver
+[database]
+  driver = "sqlite3"
+
+[sqlite3]
+  connect = "temp/gorm.db"
