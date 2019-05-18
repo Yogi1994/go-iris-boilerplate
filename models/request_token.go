@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"MVC-golang/database"
-	"MVC-golang/utils"
+	"Go-iris-boilerplate/database"
+	"Go-iris-boilerplate/utils"
 
 	"github.com/jinzhu/gorm"
 )

@@ -3,7 +3,7 @@ package controllers
 import (
 	"fmt"
 	// "runtime/debug"
-	"MVC-golang/models"
+	"Go-iris-boilerplate/models"
 
 	"github.com/kataras/iris"
 	"gopkg.in/go-playground/validator.v9"

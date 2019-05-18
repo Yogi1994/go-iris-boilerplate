@@ -1,10 +1,10 @@
 package main
 
 import (
-	"MVC-golang/config"
-	"MVC-golang/controllers"
-	"MVC-golang/database"
-	"MVC-golang/models"
+	"Go-iris-boilerplate/config"
+	"Go-iris-boilerplate/controllers"
+	"Go-iris-boilerplate/database"
+	"Go-iris-boilerplate/models"
 	"fmt"
 	"os"
 

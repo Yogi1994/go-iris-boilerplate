@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"MVC-golang/config"
+	"Go-iris-boilerplate/config"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"

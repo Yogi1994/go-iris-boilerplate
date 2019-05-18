@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"MVC-golang/models"
-	"MVC-golang/utils"
+	"Go-iris-boilerplate/models"
+	"Go-iris-boilerplate/utils"
 
 	"github.com/kataras/iris"
 )

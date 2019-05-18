@@ -1,7 +1,7 @@
 package models
 
 import (
-	"MVC-golang/database"
+	"Go-iris-boilerplate/database"
 	"fmt"
 	"time"
 
