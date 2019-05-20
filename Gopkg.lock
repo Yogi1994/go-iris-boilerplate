@@ -44,10 +44,10 @@
   version = "v1.1.0"
 
 [[projects]]
+  branch = "master"
   name = "github.com/flosch/pongo2"
   packages = ["."]
-  revision = "5e81b817a0c48c1c57cdf1a9056cf76bdee02ca9"
-  version = "v3.0"
+  revision = "8914e1cf9164420c91423cdefc7d978a76c38213"
 
 [[projects]]
   name = "github.com/go-playground/locales"
@@ -108,6 +108,12 @@
   packages = ["."]
   revision = "0ff49de124c6f76f8494e194af75bde0f1a49a29"
   version = "v1.1.6"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/juju/errors"
+  packages = ["."]
+  revision = "e65537c515d77e35697c471d6c2755375cb3adc4"
 
 [[projects]]
   name = "github.com/kataras/go-mailer"
@@ -238,6 +244,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "23cd20bfce92c134918f4faf4cf8fbef99ddfec7e5fae32db5ec00a0eaf26566"
+  inputs-digest = "416ea611a0c459a9ed5e0a2ae41914bc5f92f9b31a0b103425765be5591df91e"
   solver-name = "gps-cdcl"
   solver-version = 1
