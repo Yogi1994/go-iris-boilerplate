@@ -16,7 +16,7 @@ type User struct {
 	Email       string `gorm:"unique;VARCHAR(254)"`
 	FirstName   string `gorm:"not null VARCHAR(120)"`
 	LastName    string `gorm:"VARCHAR(120) default:''"`
-	Password    string `gorm:"not null VARCHAR(191)"`
+	Password    string `json:"-" gorm:"not null VARCHAR(191)"`
 	IsVerified  bool   `gorm:"default:false"`
 	IsSuperUser bool   `gorm:"default:false"`
 }
@@ -28,12 +28,12 @@ type UserJson struct {
 	LastName  string `json:"last_name" validate:"lte=120"`
 }
 
-type ShowUserJson struct {
-	ID        uint
-	Email     string `json:"email" validate:"required,gte=5,lte=254"`
-	FirstName string `json:"first_name" validate:"required,gte=2,lte=120"`
-	LastName  string `json:"last_name" validate:"lte=120"`
-}
+// type ShowUserJson struct {
+// 	ID        uint
+// 	Email     string `json:"email" validate:"required,gte=5,lte=254"`
+// 	FirstName string `json:"first_name" validate:"required,gte=2,lte=120"`
+// 	LastName  string `json:"last_name" validate:"lte=120"`
+// }
 
 type UpdateUserJson struct {
 	FirstName string `json:"first_name" validate:"gte=2,lte=120"`
@@ -51,11 +51,11 @@ func GetUserById(id uint) (user *User, err error) {
 	if err := database.DB.Find(&user, id).Error; err != nil {
 		fmt.Printf("GetUserByIdErr:%s", err)
 	}
-	usr := new(ShowUserJson)
+	// usr := new(ShowUserJson)
 
-	usr.Email = user.Email
-	usr.FirstName = user.FirstName
-	usr.LastName = user.LastName
+	// usr.Email = user.Email
+	// usr.FirstName = user.FirstName
+	// usr.LastName = user.LastName
 
 	return
 }
@@ -146,19 +146,19 @@ func MarkUserVerified(id uint) (user *User, err error) {
 	return
 }
 
-func GetAllUsers(name, orderBy string, offset, limit int) (usr []*ShowUserJson) {
-	users := []*User{}
+func GetAllUsers(name, orderBy string, offset, limit int) (users []*User) {
+	// users := []*User{}
 	if err := database.GetAll(name, orderBy, offset, limit).Find(&users).Error; err != nil {
 		fmt.Printf("GetAllUserErr:%s", err)
 	}
-	for _, element := range users {
-		u := new(ShowUserJson)
-		u.Email = element.Email
-		u.ID = element.ID
-		u.FirstName = element.FirstName
-		u.LastName = element.LastName
-		usr = append(usr, u)
-	}
+	// for _, element := range users {
+	// 	u := new(ShowUserJson)
+	// 	u.Email = element.Email
+	// 	u.ID = element.ID
+	// 	u.FirstName = element.FirstName
+	// 	u.LastName = element.LastName
+	// 	usr = append(usr, u)
+	// }
 	return
 }
 
